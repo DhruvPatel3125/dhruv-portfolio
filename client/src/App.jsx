@@ -12,6 +12,7 @@ import ChatBot from './components/ChatBot/ChatBot';
 import AdminDashboard from './components/AdminDashboard/AdminDashboard';
 import HUD from './components/HUD/HUD';
 import CustomCursor from './components/CustomCursor/CustomCursor';
+import SEO from './components/SEO/SEO';
 import Lenis from 'lenis';
 import 'lenis/dist/lenis.css';
 
@@ -114,6 +115,7 @@ function App() {
 
   return (
     <div className={style.App}>
+      <SEO aboutData={aboutData} />
       <CustomCursor />
 
       {/* HUD overlays */}
