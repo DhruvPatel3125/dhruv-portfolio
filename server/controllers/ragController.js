@@ -1,6 +1,5 @@
 import Knowledge from '../models/Knowledge.js';
 import { getEmbedding } from '../services/embeddingService.js';
-import { PDFParse } from 'pdf-parse';
 
 /**
  * Helper to split a large text document into smaller semantic chunks.
@@ -197,6 +196,7 @@ export async function uploadDocument(req, res) {
     
     if (extension === 'pdf') {
       console.log(`[RagController] Parsing PDF document: "${originalName}"...`);
+      const { PDFParse } = await import('pdf-parse');
       const parser = new PDFParse({ data: req.file.buffer });
       const parsedPdf = await parser.getText();
       textContent = parsedPdf.text;

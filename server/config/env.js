@@ -2,6 +2,17 @@ import dotenv from 'dotenv';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
+// Polyfill browser DOM objects in Node.js runtime (avoids pdfjs-dist ReferenceError: DOMMatrix is not defined)
+if (typeof globalThis.DOMMatrix === 'undefined') {
+  globalThis.DOMMatrix = class DOMMatrix {};
+}
+if (typeof globalThis.ImageData === 'undefined') {
+  globalThis.ImageData = class ImageData {};
+}
+if (typeof globalThis.Path2D === 'undefined') {
+  globalThis.Path2D = class Path2D {};
+}
+
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
