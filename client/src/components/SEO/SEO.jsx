@@ -59,6 +59,7 @@ const SEO = ({ aboutData }) => {
       <meta name="author" content={name} />
       <meta name="robots" content="index, follow, max-image-preview:large" />
       <meta name="theme-color" content="#0d1117" />
+      <meta name="google-site-verification" content="googlea076ebff7556f077" />
       <link rel="canonical" href={currentUrl} />
 
       {/* Open Graph Meta Tags (Facebook, LinkedIn, Discord) */}
