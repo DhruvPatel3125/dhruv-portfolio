@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="Electron" modified="2026-06-29T11:15:00.000Z" agent="5.0" version="20.0.0" type="device">
+  <diagram id="school_erp_blueprinted_er" name="School ERP Blueprint ER Diagram">
+    <mxGraphModel dx="1200" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="0" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="900" math="0" shadow="0">
+      <root>
+        <!-- Canvas Base Cells -->
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- ==================== ENTITIES (RECTANGLES) ==================== -->
+        
+        <!-- IDCard - Weak Entity (Double Rectangle at Top-Left) -->
+        <mxCell id="ent_idcard" value="ID_CARD" style="rounded=0;whiteSpace=wrap;html=1;double=1;fillColor=#cce5ff;strokeColor=#004085;strokeWidth=2;fontStyle=1;fontSize=12;fontColor=#004085;" vertex="1" parent="1">
+          <mxGeometry x="150" y="80" width="120" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- Student Entity (Rectangle at Middle-Left) -->
+        <mxCell id="ent_student" value="STUDENT" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#cce5ff;strokeColor=#004085;strokeWidth=2;fontStyle=1;fontSize=12;fontColor=#004085;" vertex="1" parent="1">
+          <mxGeometry x="150" y="300" width="120" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- FeeCategory Entity (Rectangle at Top-Middle) -->
+        <mxCell id="ent_feecategory" value="FEE_CATEGORY" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#cce5ff;strokeColor=#004085;strokeWidth=2;fontStyle=1;fontSize=11;fontColor=#004085;" vertex="1" parent="1">
+          <mxGeometry x="500" y="80" width="120" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- Class Entity (Rectangle at Middle-Center) -->
+        <mxCell id="ent_class" value="CLASS" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#cce5ff;strokeColor=#004085;strokeWidth=2;fontStyle=1;fontSize=12;fontColor=#004085;" vertex="1" parent="1">
+          <mxGeometry x="500" y="300" width="120" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- StudentFee Entity (Rectangle at Bottom-Center) -->
+        <mxCell id="ent_studentfee" value="STUDENT_FEE" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#cce5ff;strokeColor=#004085;strokeWidth=2;fontStyle=1;fontSize=12;fontColor=#004085;" vertex="1" parent="1">
+          <mxGeometry x="500" y="550" width="120" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- Staff Entity (Rectangle at Top-Right) -->
+        <mxCell id="ent_staff" value="STAFF" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#cce5ff;strokeColor=#004085;strokeWidth=2;fontStyle=1;fontSize=12;fontColor=#004085;" vertex="1" parent="1">
+          <mxGeometry x="850" y="80" width="120" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- School/Tenant Entity (Rectangle at Middle-Right) -->
+        <mxCell id="ent_tenant" value="TENANT" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#cce5ff;strokeColor=#004085;strokeWidth=2;fontStyle=1;fontSize=12;fontColor=#004085;" vertex="1" parent="1">
+          <mxGeometry x="850" y="300" width="120" height="60" as="geometry" />
+        </mxCell>
+
+
+        <!-- ==================== RELATIONSHIPS (DIAMONDS) ==================== -->
+
+        <!-- Student OF IDCard (Identifying Double Diamond) -->
+        <mxCell id="rel_of" value="OF" style="rhombus;whiteSpace=wrap;html=1;shape=doubleRhombus;fillColor=#cce5ff;strokeColor=#004085;strokeWidth=2;fontStyle=1;fontSize=11;fontColor=#004085;" vertex="1" parent="1">
+          <mxGeometry x="160" y="190" width="100" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- Student INCURS FeeCategory -->
+        <mxCell id="rel_incurs" value="INCURS" style="rhombus;whiteSpace=wrap;html=1;fillColor=#cce5ff;strokeColor=#004085;strokeWidth=2;fontStyle=1;fontSize=11;fontColor=#004085;" vertex="1" parent="1">
+          <mxGeometry x="340" y="190" width="100" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- IDCard VALIDATES FeeCategory -->
+        <mxCell id="rel_validates" value="VALIDATES" style="rhombus;whiteSpace=wrap;html=1;fillColor=#cce5ff;strokeColor=#004085;strokeWidth=2;fontStyle=1;fontSize=11;fontColor=#004085;" vertex="1" parent="1">
+          <mxGeometry x="340" y="80" width="100" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- Student ENROLLED_IN Class -->
+        <mxCell id="rel_enrolled" value="ENROLLED" style="rhombus;whiteSpace=wrap;html=1;fillColor=#cce5ff;strokeColor=#004085;strokeWidth=2;fontStyle=1;fontSize=11;fontColor=#004085;" vertex="1" parent="1">
+          <mxGeometry x="340" y="300" width="100" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- Student PAYS StudentFee -->
+        <mxCell id="rel_pays" value="PAYS" style="rhombus;whiteSpace=wrap;html=1;fillColor=#cce5ff;strokeColor=#004085;strokeWidth=2;fontStyle=1;fontSize=11;fontColor=#004085;" vertex="1" parent="1">
+          <mxGeometry x="340" y="440" width="100" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- Class ASSOCIATED_WITH StudentFee -->
+        <mxCell id="rel_associated" value="ASSOCIATED" style="rhombus;whiteSpace=wrap;html=1;fillColor=#cce5ff;strokeColor=#004085;strokeWidth=2;fontStyle=1;fontSize=11;fontColor=#004085;" vertex="1" parent="1">
+          <mxGeometry x="510" y="440" width="100" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- Class APPLIES_TO FeeCategory -->
+        <mxCell id="rel_applies" value="APPLIES_TO" style="rhombus;whiteSpace=wrap;html=1;fillColor=#cce5ff;strokeColor=#004085;strokeWidth=2;fontStyle=1;fontSize=10;fontColor=#004085;" vertex="1" parent="1">
+          <mxGeometry x="510" y="190" width="100" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- Class BELONGS_TO School/Tenant -->
+        <mxCell id="rel_belongs" value="BELONGS_TO" style="rhombus;whiteSpace=wrap;html=1;fillColor=#cce5ff;strokeColor=#004085;strokeWidth=2;fontStyle=1;fontSize=10;fontColor=#004085;" vertex="1" parent="1">
+          <mxGeometry x="690" y="300" width="100" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- Staff MANAGES School/Tenant -->
+        <mxCell id="rel_manages" value="MANAGES" style="rhombus;whiteSpace=wrap;html=1;fillColor=#cce5ff;strokeColor=#004085;strokeWidth=2;fontStyle=1;fontSize=11;fontColor=#004085;" vertex="1" parent="1">
+          <mxGeometry x="860" y="190" width="100" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- Student PEERS Student (Self Relationship) -->
+        <mxCell id="rel_peers" value="PEERS" style="rhombus;whiteSpace=wrap;html=1;fillColor=#cce5ff;strokeColor=#004085;strokeWidth=2;fontStyle=1;fontSize=11;fontColor=#004085;" vertex="1" parent="1">
+          <mxGeometry x="160" y="460" width="100" height="60" as="geometry" />
+        </mxCell>
+
+
+        <!-- ==================== ATTRIBUTES (ELLIPSES) ==================== -->
+
+        <!-- IDCard Attributes -->
+        <mxCell id="attr_card_id" value="&lt;u&gt;cardId&lt;/u&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=#e2f0ff;strokeColor=#004085;fontColor=#004085;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="50" y="40" width="80" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="attr_card_status" value="status" style="ellipse;shape=doubleEllipse;whiteSpace=wrap;html=1;fillColor=#e2f0ff;strokeColor=#004085;fontColor=#004085;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="40" y="100" width="80" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- Student Attributes -->
+        <mxCell id="attr_stu_adm" value="&lt;u&gt;admissionNo&lt;/u&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=#e2f0ff;strokeColor=#004085;fontColor=#004085;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="40" y="260" width="90" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="attr_stu_parent" value="parent_inf" style="ellipse;shape=doubleEllipse;whiteSpace=wrap;html=1;fillColor=#e2f0ff;strokeColor=#004085;fontColor=#004085;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="40" y="320" width="90" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="attr_stu_dob" value="dob" style="ellipse;whiteSpace=wrap;html=1;fillColor=#e2f0ff;strokeColor=#004085;fontColor=#004085;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="40" y="380" width="90" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- FeeCategory Attributes -->
+        <mxCell id="attr_cat_id" value="&lt;u&gt;categoryId&lt;/u&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=#e2f0ff;strokeColor=#004085;fontColor=#004085;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="520" y="10" width="80" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- Class Attributes -->
+        <mxCell id="attr_class_id" value="&lt;u&gt;classId&lt;/u&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=#e2f0ff;strokeColor=#004085;fontColor=#004085;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="430" y="390" width="80" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="attr_class_name" value="name" style="ellipse;whiteSpace=wrap;html=1;fillColor=#e2f0ff;strokeColor=#004085;fontColor=#004085;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="520" y="390" width="80" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="attr_class_sec" value="sections" style="ellipse;shape=doubleEllipse;whiteSpace=wrap;html=1;fillColor=#e2f0ff;strokeColor=#004085;fontColor=#004085;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="610" y="390" width="80" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- StudentFee Attributes -->
+        <mxCell id="attr_fee_id" value="&lt;u&gt;feeId&lt;/u&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=#e2f0ff;strokeColor=#004085;fontColor=#004085;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="380" y="560" width="80" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="attr_fee_amt" value="amountPaid" style="ellipse;whiteSpace=wrap;html=1;fillColor=#e2f0ff;strokeColor=#004085;fontColor=#004085;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="440" y="630" width="80" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="attr_fee_date" value="paymentDate" style="ellipse;whiteSpace=wrap;html=1;fillColor=#e2f0ff;strokeColor=#004085;fontColor=#004085;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="540" y="630" width="90" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="attr_fee_status" value="payment_status" style="ellipse;shape=doubleEllipse;whiteSpace=wrap;html=1;fillColor=#e2f0ff;strokeColor=#004085;fontColor=#004085;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="610" y="560" width="100" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- Staff Attributes -->
+        <mxCell id="attr_staff_id" value="&lt;u&gt;employeeId&lt;/u&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=#e2f0ff;strokeColor=#004085;fontColor=#004085;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="760" y="20" width="90" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="attr_staff_dep" value="department_inf" style="ellipse;shape=doubleEllipse;whiteSpace=wrap;html=1;fillColor=#e2f0ff;strokeColor=#004085;fontColor=#004085;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="930" y="20" width="100" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- Tenant Attributes -->
+        <mxCell id="attr_ten_id" value="&lt;u&gt;tenantId&lt;/u&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=#e2f0ff;strokeColor=#004085;fontColor=#004085;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="810" y="390" width="80" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="attr_ten_theme" value="theme_inf" style="ellipse;shape=doubleEllipse;whiteSpace=wrap;html=1;fillColor=#e2f0ff;strokeColor=#004085;fontColor=#004085;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="910" y="390" width="80" height="40" as="geometry" />
+        </mxCell>
+
+
+        <!-- ==================== LINES (CONNECTIONS) ==================== -->
+
+        <!-- Entity to Attribute connection lines -->
+        <mxCell id="line_id_1" style="endArrow=none;html=1;rounded=0;strokeColor=#004085;" edge="1" parent="1" source="ent_idcard" target="attr_card_id" />
+        <mxCell id="line_id_2" style="endArrow=none;html=1;rounded=0;strokeColor=#004085;" edge="1" parent="1" source="ent_idcard" target="attr_card_status" />
+
+        <mxCell id="line_st_1" style="endArrow=none;html=1;rounded=0;strokeColor=#004085;" edge="1" parent="1" source="ent_student" target="attr_stu_adm" />
+        <mxCell id="line_st_2" style="endArrow=none;html=1;rounded=0;strokeColor=#004085;" edge="1" parent="1" source="ent_student" target="attr_stu_parent" />
+        <mxCell id="line_st_3" style="endArrow=none;html=1;rounded=0;strokeColor=#004085;" edge="1" parent="1" source="ent_student" target="attr_stu_dob" />
+
+        <mxCell id="line_fc_1" style="endArrow=none;html=1;rounded=0;strokeColor=#004085;" edge="1" parent="1" source="ent_feecategory" target="attr_cat_id" />
+
+        <mxCell id="line_cl_1" style="endArrow=none;html=1;rounded=0;strokeColor=#004085;" edge="1" parent="1" source="ent_class" target="attr_class_id" />
+        <mxCell id="line_cl_2" style="endArrow=none;html=1;rounded=0;strokeColor=#004085;" edge="1" parent="1" source="ent_class" target="attr_class_name" />
+        <mxCell id="line_cl_3" style="endArrow=none;html=1;rounded=0;strokeColor=#004085;" edge="1" parent="1" source="ent_class" target="attr_class_sec" />
+
+        <mxCell id="line_sf_1" style="endArrow=none;html=1;rounded=0;strokeColor=#004085;" edge="1" parent="1" source="ent_studentfee" target="attr_fee_id" />
+        <mxCell id="line_sf_2" style="endArrow=none;html=1;rounded=0;strokeColor=#004085;" edge="1" parent="1" source="ent_studentfee" target="attr_fee_amt" />
+        <mxCell id="line_sf_3" style="endArrow=none;html=1;rounded=0;strokeColor=#004085;" edge="1" parent="1" source="ent_studentfee" target="attr_fee_date" />
+        <mxCell id="line_sf_4" style="endArrow=none;html=1;rounded=0;strokeColor=#004085;" edge="1" parent="1" source="ent_studentfee" target="attr_fee_status" />
+
+        <mxCell id="line_sa_1" style="endArrow=none;html=1;rounded=0;strokeColor=#004085;" edge="1" parent="1" source="ent_staff" target="attr_staff_id" />
+        <mxCell id="line_sa_2" style="endArrow=none;html=1;rounded=0;strokeColor=#004085;" edge="1" parent="1" source="ent_staff" target="attr_staff_dep" />
+
+        <mxCell id="line_te_1" style="endArrow=none;html=1;rounded=0;strokeColor=#004085;" edge="1" parent="1" source="ent_tenant" target="attr_ten_id" />
+        <mxCell id="line_te_2" style="endArrow=none;html=1;rounded=0;strokeColor=#004085;" edge="1" parent="1" source="ent_tenant" target="attr_ten_theme" />
+
+        <!-- Relationship mapping links (Black borders) with Cardinality Labels & Total Participation (Thick line) -->
+        
+        <!-- Student to OF (Total Participation: thick line) -->
+        <mxCell id="line_student_of" value="1" style="endArrow=none;html=1;rounded=0;strokeWidth=3;strokeColor=#000000;fontStyle=1;" edge="1" parent="1" source="ent_student" target="rel_of" />
+        <!-- OF to IDCard -->
+        <mxCell id="line_of_idcard" value="1" style="endArrow=none;html=1;rounded=0;strokeWidth=1.5;strokeColor=#000000;" edge="1" parent="1" source="rel_of" target="ent_idcard" />
+
+        <!-- Student to INCURS -->
+        <mxCell id="line_student_incurs" value="1" style="endArrow=none;html=1;rounded=0;strokeWidth=1.5;strokeColor=#000000;" edge="1" parent="1" source="ent_student" target="rel_incurs" />
+        <!-- INCURS to FeeCategory -->
+        <mxCell id="line_incurs_category" value="N" style="endArrow=none;html=1;rounded=0;strokeWidth=1.5;strokeColor=#000000;fontStyle=1;" edge="1" parent="1" source="rel_incurs" target="ent_feecategory" />
+
+        <!-- IDCard to VALIDATES -->
+        <mxCell id="line_idcard_validates" value="1" style="endArrow=none;html=1;rounded=0;strokeWidth=1.5;strokeColor=#000000;" edge="1" parent="1" source="ent_idcard" target="rel_validates" />
+        <!-- VALIDATES to FeeCategory -->
+        <mxCell id="line_validates_category" value="N" style="endArrow=none;html=1;rounded=0;strokeWidth=1.5;strokeColor=#000000;fontStyle=1;" edge="1" parent="1" source="rel_validates" target="ent_feecategory" />
+
+        <!-- Student to ENROLLED -->
+        <mxCell id="line_student_enrolled" value="N" style="endArrow=none;html=1;rounded=0;strokeWidth=1.5;strokeColor=#000000;fontStyle=1;" edge="1" parent="1" source="ent_student" target="rel_enrolled" />
+        <!-- ENROLLED to Class -->
+        <mxCell id="line_enrolled_class" value="1" style="endArrow=none;html=1;rounded=0;strokeWidth=1.5;strokeColor=#000000;" edge="1" parent="1" source="rel_enrolled" target="ent_class" />
+
+        <!-- Student to PAYS -->
+        <mxCell id="line_student_pays" value="1" style="endArrow=none;html=1;rounded=0;strokeWidth=1.5;strokeColor=#000000;" edge="1" parent="1" source="ent_student" target="rel_pays" />
+        <!-- PAYS to StudentFee -->
+        <mxCell id="line_pays_fee" value="1" style="endArrow=none;html=1;rounded=0;strokeWidth=1.5;strokeColor=#000000;" edge="1" parent="1" source="rel_pays" target="ent_studentfee" />
+
+        <!-- Class to ASSOCIATED -->
+        <mxCell id="line_class_associated" value="1" style="endArrow=none;html=1;rounded=0;strokeWidth=1.5;strokeColor=#000000;" edge="1" parent="1" source="ent_class" target="rel_associated" />
+        <!-- ASSOCIATED to StudentFee -->
+        <mxCell id="line_associated_fee" value="1" style="endArrow=none;html=1;rounded=0;strokeWidth=1.5;strokeColor=#000000;" edge="1" parent="1" source="rel_associated" target="ent_studentfee" />
+
+        <!-- Class to APPLIES_TO -->
+        <mxCell id="line_class_applies" value="N" style="endArrow=none;html=1;rounded=0;strokeWidth=1.5;strokeColor=#000000;fontStyle=1;" edge="1" parent="1" source="ent_class" target="rel_applies" />
+        <!-- APPLIES_TO to FeeCategory -->
+        <mxCell id="line_applies_category" value="1" style="endArrow=none;html=1;rounded=0;strokeWidth=1.5;strokeColor=#000000;" edge="1" parent="1" source="rel_applies" target="ent_feecategory" />
+
+        <!-- Class to BELONGS_TO -->
+        <mxCell id="line_class_belongs" value="2" style="endArrow=none;html=1;rounded=0;strokeWidth=1.5;strokeColor=#000000;fontStyle=1;" edge="1" parent="1" source="ent_class" target="rel_belongs" />
+        <!-- BELONGS_TO to School/Tenant -->
+        <mxCell id="line_belongs_tenant" value="N" style="endArrow=none;html=1;rounded=0;strokeWidth=1.5;strokeColor=#000000;fontStyle=1;" edge="1" parent="1" source="rel_belongs" target="ent_tenant" />
+
+        <!-- Staff to MANAGES -->
+        <mxCell id="line_staff_manages" value="3" style="endArrow=none;html=1;rounded=0;strokeWidth=1.5;strokeColor=#000000;fontStyle=1;" edge="1" parent="1" source="ent_staff" target="rel_manages" />
+        <!-- MANAGES to School/Tenant -->
+        <mxCell id="line_manages_tenant" value="N" style="endArrow=none;html=1;rounded=0;strokeWidth=1.5;strokeColor=#000000;fontStyle=1;" edge="1" parent="1" source="rel_manages" target="ent_tenant" />
+
+        <!-- Student Self Relationship (PEERS loop N:M) -->
+        <mxCell id="line_peers_1" value="N" style="endArrow=none;html=1;rounded=0;strokeWidth=1.5;strokeColor=#000000;fontStyle=1;exitX=0;exitY=0.75;exitDx=0;exitDy=0;" edge="1" parent="1" source="ent_student" target="rel_peers" />
+        <mxCell id="line_peers_2" value="M" style="endArrow=none;html=1;rounded=0;strokeWidth=1.5;strokeColor=#000000;fontStyle=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="ent_student" target="rel_peers" />
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

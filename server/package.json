@@ -1,0 +1,38 @@
+{
+  "name": "portfolio-chatbot-server",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon --ignore data/ index.js",
+    "test": "node --experimental-vm-modules node_modules/jest-cli/bin/jest.js --forceExit",
+    "test:watch": "node --experimental-vm-modules node_modules/jest-cli/bin/jest.js --watch --forceExit",
+    "test:coverage": "node --experimental-vm-modules node_modules/jest-cli/bin/jest.js --coverage --forceExit"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "transform": {},
+    "moduleNameMapper": {
+      "^(\\.{1,2}/.*)\\.js$": "$1"
+    },
+    "testMatch": [
+      "**/__tests__/**/*.test.js"
+    ]
+  },
+  "dependencies": {
+    "@xenova/transformers": "^2.17.2",
+    "cloudinary": "^2.10.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "groq-sdk": "^0.13.0",
+    "mongoose": "^9.7.0",
+    "multer": "^2.2.0",
+    "pdf-parse": "^2.4.5"
+  },
+  "devDependencies": {
+    "jest": "^30.4.2",
+    "mongodb-memory-server": "^11.2.0",
+    "nodemon": "^3.1.14"
+  }
+}
