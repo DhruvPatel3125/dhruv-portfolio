@@ -1,6 +1,7 @@
 [
   {
-    "title": "New Project",
+    "_id": "6a748ee64695d33fa8c64dcc",
+    "title": "Janki Jiyana House",
     "description": "Developed a real-world D2C E-Commerce platform from scratch, covering customer experience, admin operations, inventory management, order processing, payment verification, SEO, and responsive design",
     "skills": [
       "React.js",
@@ -21,9 +22,14 @@
     "highlights": [
       "Janki Jiyana House is a full-stack D2C E-Commerce platform built with the MERN Stack (MongoDB, Express.js, React.js, Node.js). It features responsive UI, JWT authentication, product and category management, wishlist, cart, QR-based payment verification, order tracking, and a comprehensive admin dashboard. The platform also includes Cloudinary integration, SEO optimization, RESTful APIs, and role-based access control, delivering a scalable and production-ready solution for modern online businesses."
     ],
-    "imageSrc": "https://res.cloudinary.com/dgn0wbl4b/image/upload/v1786023626/portfolio/c5kpopcfglpnb20b4wa8.png"
+    "imageSrc": "https://res.cloudinary.com/dgn0wbl4b/image/upload/v1786023626/portfolio/c5kpopcfglpnb20b4wa8.png",
+    "order": 0,
+    "__v": 0,
+    "createdAt": "2026-08-06T13:40:54.608Z",
+    "updatedAt": "2026-08-06T13:40:54.608Z"
   },
   {
+    "_id": "6a748ee64695d33fa8c64dcd",
     "title": "EduCore – Multi-Tenant School Management System",
     "description": "EduCore is an enterprise-grade, full-stack multi-tenant School Management System designed to streamline academic operations, administrative tasks, and communication across educational institutions. \n\nBuilt using the MERN stack (MongoDB, Express, React, Node.js) with Tailwind CSS, EduCore delivers role-tailored dashboards for Administrators, Teachers, Students, and Parents.",
     "skills": [
@@ -50,10 +56,14 @@
       "• Media Storage: Seamless cloud document uploads via Cloudinary.",
       "Tech Stack: React 19, Node.js, Express, MongoDB, Tailwind CSS, Vite & JWT."
     ],
-    "imageSrc": "https://res.cloudinary.com/dgn0wbl4b/image/upload/v1786022987/portfolio/qrwpun2w8yb0azgprs3x.png"
+    "imageSrc": "https://res.cloudinary.com/dgn0wbl4b/image/upload/v1786022987/portfolio/qrwpun2w8yb0azgprs3x.png",
+    "order": 1,
+    "__v": 0,
+    "createdAt": "2026-08-06T13:40:54.608Z",
+    "updatedAt": "2026-08-06T13:40:54.608Z"
   },
   {
-    "_id": "6a748b884695d33fa8c64dc7",
+    "_id": "6a748ee64695d33fa8c64dce",
     "title": "Staylix Professional Hotel Booking Platform",
     "description": "A comprehensive full-stack hotel booking platform with real-time analytics, an AI-powered concierge chatbot, automated notifications, and payment processing.",
     "skills": [
@@ -82,13 +92,13 @@
       "Integrations: Seamlessly connected Razorpay, Cloudinary storage, Open-Meteo weather forecasts, and Google OAuth."
     ],
     "imageSrc": "https://res.cloudinary.com/dgn0wbl4b/image/upload/v1786022776/portfolio/tmvbhfnzqiqxcshnvk41.png",
-    "order": 0,
+    "order": 2,
     "__v": 0,
-    "createdAt": "2026-08-06T13:26:32.643Z",
-    "updatedAt": "2026-08-06T13:26:32.643Z"
+    "createdAt": "2026-08-06T13:40:54.609Z",
+    "updatedAt": "2026-08-06T13:40:54.609Z"
   },
   {
-    "_id": "6a748b884695d33fa8c64dc8",
+    "_id": "6a748ee64695d33fa8c64dcf",
     "title": "Home-Byts On-Demand Home-Service Chef Marketplace",
     "description": "A location-aware, on-demand home-service marketplace web application to discover nearby chefs, view availability, schedule bookings, and complete payments.",
     "skills": [
@@ -110,13 +120,13 @@
       "Integrations & Forms: Integrated Axios client wrappers, multi-step validations, Firebase storage, and modular component libraries."
     ],
     "imageSrc": "https://res.cloudinary.com/dgn0wbl4b/image/upload/v1781627241/portfolio/xkkqj5vixhqqsagvlv6f.png",
-    "order": 1,
+    "order": 3,
     "__v": 0,
-    "createdAt": "2026-08-06T13:26:32.643Z",
-    "updatedAt": "2026-08-06T13:26:32.643Z"
+    "createdAt": "2026-08-06T13:40:54.609Z",
+    "updatedAt": "2026-08-06T13:40:54.609Z"
   },
   {
-    "_id": "6a748b884695d33fa8c64dc9",
+    "_id": "6a748ee64695d33fa8c64dd0",
     "title": "Syshop Ecommerce website",
     "description": "A robust full-stack eCommerce marketplace powered by the MERN stack, featuring comprehensive product catalogs, secure token sessions, active shopping carts, and dynamic inventory lookups.",
     "skills": [
@@ -137,13 +147,13 @@
       "Scalable REST Architecture: Designed modular Express routers, standard middleware error handlers, and Axios API configurations."
     ],
     "imageSrc": "https://res.cloudinary.com/dgn0wbl4b/image/upload/v1781627261/portfolio/jeund0hbc7jdimkojp6p.png",
-    "order": 2,
+    "order": 4,
     "__v": 0,
-    "createdAt": "2026-08-06T13:26:32.643Z",
-    "updatedAt": "2026-08-06T13:26:32.643Z"
+    "createdAt": "2026-08-06T13:40:54.609Z",
+    "updatedAt": "2026-08-06T13:40:54.609Z"
   },
   {
-    "_id": "6a748b884695d33fa8c64dca",
+    "_id": "6a748ee64695d33fa8c64dd1",
     "title": "Coza Store - Premium E-Commerce Client UI",
     "description": "A premium retail eCommerce storefront client frontend implementing interactive search, central cart state management, slide-in filter panel, and high fidelity image galleries.",
     "skills": [
@@ -164,9 +174,9 @@
       "Responsive Styling: Integrated vendor animations and mobile layouts utilizing modular CSS styles."
     ],
     "imageSrc": "https://res.cloudinary.com/dgn0wbl4b/image/upload/v1781627277/portfolio/ufxf6kelgffmlkvuwgfp.jpg",
-    "order": 3,
+    "order": 5,
     "__v": 0,
-    "createdAt": "2026-08-06T13:26:32.644Z",
-    "updatedAt": "2026-08-06T13:26:32.644Z"
+    "createdAt": "2026-08-06T13:40:54.609Z",
+    "updatedAt": "2026-08-06T13:40:54.609Z"
   }
 ]
