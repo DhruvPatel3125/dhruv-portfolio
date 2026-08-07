@@ -16,11 +16,24 @@ let cachedKnowledgeString = null;
 
 function loadJsonFile(fileName) {
   try {
-    const filePath = path.join(DATA_DIR, fileName);
-    if (!fs.existsSync(filePath)) {
+    const pathsToTry = [
+      path.resolve(__dirname, '../data', fileName),
+      path.resolve(process.cwd(), 'server/data', fileName),
+      path.resolve(process.cwd(), 'data', fileName)
+    ];
+
+    let targetPath = null;
+    for (const p of pathsToTry) {
+      if (fs.existsSync(p)) {
+        targetPath = p;
+        break;
+      }
+    }
+
+    if (!targetPath) {
       return null;
     }
-    const rawData = fs.readFileSync(filePath, 'utf8');
+    const rawData = fs.readFileSync(targetPath, 'utf8');
     return JSON.parse(rawData);
   } catch (error) {
     console.error(`[KnowledgeLoader] Error reading fallback file ${fileName}:`, error.message);

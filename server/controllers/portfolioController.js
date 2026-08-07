@@ -12,20 +12,29 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const DATA_DIR = path.resolve(__dirname, '../data');
 
-// Helper to get local JSON fallback file paths
+// Helper to get local JSON fallback file paths with Vercel serverless resolution support
 function getFilePath(type) {
-  switch (type) {
-    case 'projects':
-      return path.join(DATA_DIR, 'project.json');
-    case 'skills':
-      return path.join(DATA_DIR, 'skills.json');
-    case 'history':
-      return path.join(DATA_DIR, 'history.json');
-    case 'about':
-      return path.join(DATA_DIR, 'additional.json');
-    default:
-      return null;
+  const fileNameMap = {
+    projects: 'project.json',
+    skills: 'skills.json',
+    history: 'history.json',
+    about: 'additional.json'
+  };
+  const fileName = fileNameMap[type];
+  if (!fileName) return null;
+
+  const pathsToTry = [
+    path.resolve(__dirname, '../data', fileName),
+    path.resolve(process.cwd(), 'server/data', fileName),
+    path.resolve(process.cwd(), 'data', fileName)
+  ];
+
+  for (const p of pathsToTry) {
+    if (fs.existsSync(p)) {
+      return p;
+    }
   }
+  return null;
 }
 
 // Safely read local JSON file for fallback
