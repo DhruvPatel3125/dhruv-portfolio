@@ -28,8 +28,9 @@ export default function Project() {
   const [activeCategory, setActiveCategory] = useState('all');
 
   const filteredProjects = projects.filter(project => {
-    // 1. Category Filter
-    const skillsJoined = project.skills.map(s => s.toLowerCase()).join(' ');
+    if (!project) return false;
+    const skillsArray = Array.isArray(project.skills) ? project.skills : [];
+    const skillsJoined = skillsArray.map(s => String(s).toLowerCase()).join(' ');
 
     let matchesCategory = true;
     if (activeCategory === 'fullstack') {
@@ -40,11 +41,11 @@ export default function Project() {
       matchesCategory = skillsJoined.includes('react') && !(skillsJoined.includes('mongodb') || skillsJoined.includes('node'));
     }
 
-    // 2. Search query Filter
-    const titleLower = project.title.toLowerCase();
+    const titleLower = (project.title || '').toLowerCase();
+    const queryLower = (searchQuery || '').toLowerCase();
     const matchesSearch = 
-      titleLower.includes(searchQuery.toLowerCase()) || 
-      skillsJoined.includes(searchQuery.toLowerCase());
+      titleLower.includes(queryLower) || 
+      skillsJoined.includes(queryLower);
 
     return matchesCategory && matchesSearch;
   });
