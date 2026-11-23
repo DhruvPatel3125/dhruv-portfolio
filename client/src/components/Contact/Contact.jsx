@@ -279,6 +279,23 @@ export default function Contact({ aboutData }) {
       </div>
       
       <div className={styles.copyright}>
+        <div className={styles.footerLinks}>
+          <a href="#about">About</a>
+          <a href="#experience">Experience</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <div className={styles.footerSocials}>
+          <a href={aboutData?.github || "https://github.com/DhruvPatel3125"} target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <img src={githubIcon} alt="" className={styles.footerSocialIcon} />
+          </a>
+          <a href={aboutData?.linkedin || "https://www.linkedin.com/in/dhruvpatel312/"} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <img src={linkedinIcon} alt="" className={styles.footerSocialIcon} />
+          </a>
+          <a href={aboutData?.email ? `mailto:${aboutData.email}` : "mailto:dhruvjpatel5@gmail.com"} aria-label="Email">
+            <img src={emailIcon} alt="" className={styles.footerSocialIcon} />
+          </a>
+        </div>
         <p>&copy; {new Date().getFullYear()} Dhruv Patel. All rights reserved.</p>
       </div>
     </motion.footer>

@@ -3,6 +3,10 @@ import { config } from '../config/env.js';
 
 let groqClient = null;
 
+// llama-3.1-8b-instant was shut down by Groq on 2026-08-16 (free/developer tiers).
+// openai/gpt-oss-20b is Groq's official replacement. Override with GROQ_MODEL env var if needed.
+const GROQ_MODEL = process.env.GROQ_MODEL || 'openai/gpt-oss-20b';
+
 // The base system prompt that guides the persona and sets strict constraints on responses
 const getSystemPrompt = (context) => `You are Dhruv Patel's AI Portfolio Assistant, representing Dhruv Patel (Junior Full-Stack Developer & AI Engineer).
 Your goal is to answer questions from recruiters, HRs, or collaborators professionally and confidently based ONLY on the portfolio knowledge base provided below.
@@ -77,12 +81,12 @@ export async function generateChatCompletion(userMessage, history = [], context)
     });
 
     // 3. Make API request to Groq Cloud
-    // Using llama-3.1-8b-instant for fast responses and much higher rate limits on the free tier
+    // Using openai/gpt-oss-20b (replacement for the retired llama-3.1-8b-instant)
     const chatCompletion = await client.chat.completions.create({
       messages,
-      model: 'llama-3.1-8b-instant',
+      model: GROQ_MODEL,
       temperature: 0.2, // Low temperature to minimize creative liberties and stick to context
-      max_tokens: 800,
+      max_tokens: 1024,
       top_p: 1,
       stream: false
     });
@@ -134,9 +138,9 @@ Example:
         { role: 'system', content: systemPrompt },
         { role: 'user', content: `User message: "${userMessage}"\nChatbot reply: "${botReply}"` }
       ],
-      model: 'llama-3.1-8b-instant',
+      model: GROQ_MODEL,
       temperature: 0.5,
-      max_tokens: 150,
+      max_tokens: 500,
       response_format: { type: "json_object" }
     });
 

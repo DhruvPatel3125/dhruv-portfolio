@@ -222,7 +222,7 @@ export default function Hero({ aboutData }) {
         
         <div className={styles.imageBorderGlow} style={{ transform: "translateZ(45px)", transformStyle: "preserve-3d" }}>
           <img
-            src="/hero/heroImage.png"
+            src="/avatar.webp"
             alt="Dhruv Patel Portrait"
             className={styles.heroImage}
             style={{ transform: "translateZ(10px)" }}

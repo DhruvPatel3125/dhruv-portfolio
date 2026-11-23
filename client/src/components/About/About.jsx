@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { motion, useMotionValue, useTransform } from "framer-motion";
 import style from "./About.module.css";
-import aboutImage from "/about/aboutImage.png";
+import aboutImage from "/avatar.webp";
 
 export default function About({ aboutData }) {
   const [activeTab, setActiveTab] = useState("profile");

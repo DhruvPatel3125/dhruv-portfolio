@@ -1,5 +1,43 @@
 [
   {
+    "_id": "6a7572b39003b08e3c59890c",
+    "title": "Zoberry Ecommerce Shop Website",
+    "description": "Full-stack enterprise E-Commerce solution featuring a responsive Next.js storefront, a dedicated Vite React admin dashboard, and a Node.js/Express REST backend. Built with MongoDB, Redux Toolkit, Redis caching, and Cloudinary for high-performance inventory and media management.\n",
+    "skills": [
+      "React",
+      "Next.js",
+      "TypeScript",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "Redux Toolkit",
+      "Redis",
+      "Tailwind CSS",
+      "Material UI",
+      "NextAuth",
+      "JWT",
+      "Cloudinary",
+      "REST API"
+    ],
+    "demo": "https://www.zoberryenterprise.shop/",
+    "source": "",
+    "highlights": [
+      "Architected a modular full-stack solution featuring a Next.js customer storefront, a dedicated Vite React admin panel, and an Express.js backend.",
+      "Integrated Upstash Redis caching and optimized MongoDB query performance to deliver sub-second page loads and fast API responses.",
+      "Implemented centralized state management with Redux Toolkit for cart handling, user wishlists, dynamic price filtering, and session persistence.",
+      "Developed a feature-rich Admin Dashboard using Material UI (@mui/x-data-grid) for complete inventory, category, user, and order management.",
+      "Built secure authentication & authorization workflows using NextAuth, JWT tokens, and password hashing with Bcrypt.",
+      "Integrated Cloudinary and Multer for optimized multi-image product uploads and media storage management.",
+      "Created automated catalog seeding and dry-run CLI tools for testing large product datasets efficiently.",
+      "Designed a high-converting, modern UI using Tailwind CSS, DaisyUI, Framer Motion animations, and Lenis smooth scrolling."
+    ],
+    "imageSrc": "https://res.cloudinary.com/dgn0wbl4b/image/upload/v1786077111/portfolio/w6jy3ltfb6z0zywgxcs3.png",
+    "order": 0,
+    "__v": 0,
+    "createdAt": "2026-08-07T05:52:51.723Z",
+    "updatedAt": "2026-08-07T05:52:51.723Z"
+  },
+  {
     "_id": "6a748ee64695d33fa8c64dcc",
     "title": "Janki Jiyana House",
     "description": "Developed a real-world D2C E-Commerce platform from scratch, covering customer experience, admin operations, inventory management, order processing, payment verification, SEO, and responsive design",
@@ -18,7 +56,7 @@
       "React Context API"
     ],
     "demo": "https://www.jankijiyanahouse.com/",
-    "source": "https://www.jankijiyanahouse.com/",
+    "source": "",
     "highlights": [
       "Janki Jiyana House is a full-stack D2C E-Commerce platform built with the MERN Stack (MongoDB, Express.js, React.js, Node.js). It features responsive UI, JWT authentication, product and category management, wishlist, cart, QR-based payment verification, order tracking, and a comprehensive admin dashboard. The platform also includes Cloudinary integration, SEO optimization, RESTful APIs, and role-based access control, delivering a scalable and production-ready solution for modern online businesses."
     ],
@@ -45,8 +83,8 @@
       "Postman",
       "VS Code"
     ],
-    "demo": "https://school-managment-system-puce.vercel.app/",
-    "source": "https://school-managment-system-puce.vercel.app/",
+    "demo": "https://educore-school-managment.vercel.app/",
+    "source": "https://github.com/DhruvPatel3125/school-managment-system",
     "highlights": [
       "EduCore is an enterprise-grade multi-tenant School Management System designed to streamline academic operations, administration, and communication.",
       "Key Features:",
@@ -83,8 +121,8 @@
       "Leaflet.js",
       "Recharts"
     ],
-    "demo": "https://github.com/DhruvPatel3125",
-    "source": "https://github.com/DhruvPatel3125",
+    "demo": "https://staylix.vercel.app/",
+    "source": "https://github.com/DhruvPatel3125/staylix",
     "highlights": [
       "AI Concierge Chatbot: Uses Groq AI (LLaMA 3.3) and Retrieval-Augmented Generation (RAG) for smart guest assistance.",
       "Real-time Dashboards: Integrated interactive analytics and data visualization using Recharts and Socket.IO.",
@@ -111,8 +149,8 @@
       "Geolocation",
       "Firebase"
     ],
-    "demo": "https://github.com/DhruvPatel3125/home-byte",
-    "source": "https://github.com/DhruvPatel3125/home-byte",
+    "demo": "",
+    "source": "",
     "highlights": [
       "Location-Based Discovery: Leveraged geolocation queries to dynamically filter and showcase nearby home chefs.",
       "Time-Slot Scheduling: Designed a booking system with pricing calculations, slot selection, and collision check logic.",
@@ -138,7 +176,7 @@
       "JWT",
       "Axios"
     ],
-    "demo": "https://github.com/DhruvPatel3125/mern-ecomm",
+    "demo": "",
     "source": "https://github.com/DhruvPatel3125/mern-ecomm",
     "highlights": [
       "JWT Security Protocols: Configured user registration, password hashing using bcrypt, and token-based state authorization.",
@@ -165,8 +203,8 @@
       "Select2",
       "Slick Carousel"
     ],
-    "demo": "https://github.com/DhruvPatel3125/coza-store",
-    "source": "https://github.com/DhruvPatel3125/coza-store",
+    "demo": "",
+    "source": "",
     "highlights": [
       "Interactive Shop Operations: Built shopping carts and watchlists with active count updates using Redux Toolkit slices.",
       "Custom UI Carousels: Structured product gallery view models, filter cards, and image zooms using Slick and Lightbox2.",

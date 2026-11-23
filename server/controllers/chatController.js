@@ -65,19 +65,14 @@ export async function handleChat(req, res) {
   } catch (error) {
 
     console.error('[ChatController] Error processing request:', error);
-    
-    // Provide clean user-facing errors
-    const errorMessage = error.message || '';
-    if (errorMessage.includes('apiKey') || errorMessage.includes('GROQ_API_KEY')) {
-      return res.status(500).json({
-        error: 'Backend is misconfigured. Groq API Key is missing.',
-        reply: 'Oops! The AI backend seems to be missing its API key configuration. Please set GROQ_API_KEY in the server .env file.'
-      });
-    }
 
-    return res.status(500).json({
-      error: 'Failed to process chat message.',
-      reply: 'Sorry, I encountered an internal server error while preparing your response. Please try again in a few seconds.'
+    // Graceful fallback: never show visitors a raw server error. Log the real
+    // cause server-side (above) and answer with verified static basics instead.
+    const fallbackSessionId = (req.body && req.body.sessionId) || `session_${Date.now()}_${Math.random().toString(36).substring(2, 9)}`;
+    return res.status(200).json({
+      reply: "Hi! I'm Dhruv's AI assistant — I'm having a brief technical issue, but I can still help with the basics. Dhruv Patel is a Full-Stack Developer (MERN: React, Node.js, Express, MongoDB) based in Surat, with professional experience at PlanicsDev Infotech and Webito Infotech. You can reach him at dhruvjpatel5@gmail.com or through the Contact section of this page.",
+      suggestions: ["What are Dhruv's skills?", "Tell me about his projects", "How can I contact him?"],
+      sessionId: fallbackSessionId
     });
   }
 }
