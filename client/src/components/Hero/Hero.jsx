@@ -228,10 +228,10 @@ export default function Hero({ aboutData }) {
             loop
             muted
             playsInline
-            poster="/avatar-working-poster.jpg"
+            poster="/avatar-poster.jpg"
             aria-label="Dhruv Patel animated portrait"
           >
-            <source src="/avatar-working.mp4" type="video/mp4" />
+            <source src="/avatar-idle.mp4" type="video/mp4" />
           </video>
         </div>
       </motion.div>
