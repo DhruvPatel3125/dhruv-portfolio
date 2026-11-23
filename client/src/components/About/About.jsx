@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { motion, useMotionValue, useTransform } from "framer-motion";
 import style from "./About.module.css";
-import aboutImage from "/avatar.webp";
+
 
 export default function About({ aboutData }) {
   const [activeTab, setActiveTab] = useState("profile");
@@ -72,15 +72,17 @@ export default function About({ aboutData }) {
             <div className={style.gridBackground} />
             
             <div className={style.imageContainer} style={{ transform: "translateZ(30px)" }}>
-              <img 
-                src={aboutImage} 
-                alt="Dhruv Patel Diagnostic Portrait" 
+              <video
                 className={style.aboutImage}
-                onError={(e) => {
-                  e.target.onerror = null;
-                  e.target.src = "https://images.unsplash.com/photo-1534972195531-d756b9bda9f2?w=500&auto=format&fit=crop";
-                }}
-              />
+                autoPlay
+                loop
+                muted
+                playsInline
+                poster="/avatar-working-poster.jpg"
+                aria-label="Dhruv Patel animated portrait"
+              >
+                <source src="/avatar-working.mp4" type="video/mp4" />
+              </video>
             </div>
             <div className={style.telemetryOverlay} style={{ transform: "translateZ(40px)" }}>
               <span>{aboutData?.name ? `${aboutData.name.toUpperCase().replace(/\s+/g, '_')}_ID` : 'DHRUV_PATEL_ID'}: DP-3125</span>

@@ -221,16 +221,18 @@ export default function Hero({ aboutData }) {
         <div className={styles.circleDialTwo} />
         
         <div className={styles.imageBorderGlow} style={{ transform: "translateZ(45px)", transformStyle: "preserve-3d" }}>
-          <img
-            src="/avatar.webp"
-            alt="Dhruv Patel Portrait"
+          <video
             className={styles.heroImage}
             style={{ transform: "translateZ(10px)" }}
-            onError={(e) => {
-              e.target.onerror = null;
-              e.target.src = "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?w=500&auto=format&fit=crop";
-            }}
-          />
+            autoPlay
+            loop
+            muted
+            playsInline
+            poster="/avatar-working-poster.jpg"
+            aria-label="Dhruv Patel animated portrait"
+          >
+            <source src="/avatar-working.mp4" type="video/mp4" />
+          </video>
         </div>
       </motion.div>
 
